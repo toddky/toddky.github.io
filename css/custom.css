@@ -1,0 +1,39 @@
+
+body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Fira Code';
+}
+
+nav {
+	display: flex;
+	background-color: #555;
+	padding: 0 0;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin: 0 0px;
+}
+nav a:hover {
+	background-color: #88f;
+}
+
+main {
+	padding: 0px 10px;
+	margin: 0px 0px;
+}
+
+p code {
+	background-color: #ddd;
+	padding: 0px 3px 0px;
+}
+li code {
+	background-color: #ddd;
+	padding: 0px 3px 0px;
+}
+div pre code span {
+	padding: 0px 0px 0px 0px;
+}
+
