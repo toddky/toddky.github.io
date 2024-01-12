@@ -6,14 +6,24 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Nov 2023 07:00:00 +0000</lastBuildDate><atom:link href="https://toddky.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://toddky.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Butter Mochi</title>
       <link>https://toddky.github.io/posts/butter-mochi/</link>
-      <pubDate>Wed, 22 Nov 2023 07:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://toddky.github.io/posts/butter-mochi/</guid>
       <description>About Recipe copied from Hawaiian Electric&amp;rsquo;s page for posterity. Demonstrated by: Helen Kuoha-Torco. Aloha Festivals - August 16, 2003. Ingredients: 1 lb mochiko (Japanese glutinous rice flour) 3 cups sugar 1 1/2 teaspoons baking powder 4 eggs, beaten 2 teaspoons vanilla extract 1/2 cup butter, melted 1 can (13.5 oz) coconut milk 1 can (14.5 oz) evaporated milk Directions: Preheat electric oven to 350°F. Grease a 13 x 9 x 2-inch pan or two 8 x 8 x 2-inch pans.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://toddky.github.io/posts/hello-world/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://toddky.github.io/posts/hello-world/</guid>
+      <description>echo &amp;#34;Hello World!&amp;#34; Welcome to my blog and first ever blog post!
+Why I&amp;rsquo;m Blogging To share my knowledge, thoughts, and ideas with others. To get better at writing and expressing said thoughts and ideas. As a link hoarder, I want somewhere to dump my links (this will be in my Collections page). Learn Hugo, HTML/CSS, and maybe some JavaScript. Topics Command Line Tools. Things like vim, tmux, git, etc. Scripting.</description>
     </item>
     
   </channel>
