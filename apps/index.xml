@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Nov 2024 09:08:49 -0600</lastBuildDate><atom:link href="https://toddky.github.io/apps/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Loan Calculator</title>
+      <link>https://toddky.github.io/apps/loan/</link>
+      <pubDate>Mon, 04 Nov 2024 09:08:49 -0600</pubDate>
+      
+      <guid>https://toddky.github.io/apps/loan/</guid>
+      <description> Loan Amount ($): Annual Interest Rate (%): Loan Term (Years): Extra Monthly Payment ($): Monthly Payment ($): Total Amount Paid ($): Total Interest Paid ($): </description>
+    </item>
+    
+    <item>
       <title>ROT13 Cipher</title>
       <link>https://toddky.github.io/apps/rot13/</link>
       <pubDate>Mon, 04 Nov 2024 09:08:49 -0600</pubDate>

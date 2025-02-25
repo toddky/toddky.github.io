@@ -1,0 +1,104 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/css/fira_code.css"/>
+<link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+<head>
+  <title>My Website</title>
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/posts">Blog</a>
+    <a href="/awesome">Awesome</a>
+    <a href="/apps">Apps</a>
+    <a href="/about">About</a>
+    
+  
+</nav>
+
+<main>
+
+    November 4, 2024
+    <h1>Loan Calculator</h1>
+    <style>
+  #loan, #rate, #years, #extra, #monthlyPayment, #totalPaid, #totalInterest {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+</style>
+<p><label for="loan">Loan Amount ($):</label>
+<input type="number" id="loan" placeholder="Enter loan amount"></p>
+<p><label for="rate">Annual Interest Rate (%):</label>
+<input type="number" id="rate" placeholder="Enter interest rate"></p>
+<p><label for="years">Loan Term (Years):</label>
+<input type="number" id="years" placeholder="Enter number of years"></p>
+<p><label for="extra">Extra Monthly Payment ($):</label>
+<input type="number" id="extra" placeholder="Enter extra payment (optional)"></p>
+<p><label for="monthlyPayment">Monthly Payment ($):</label>
+<input type="text" id="monthlyPayment" readonly></p>
+<p><label for="totalPaid">Total Amount Paid ($):</label>
+<input type="text" id="totalPaid" readonly></p>
+<p><label for="totalInterest">Total Interest Paid ($):</label>
+<input type="text" id="totalInterest" readonly></p>
+<script>
+    function calculateLoan() {
+        const loan  = parseFloat(document.getElementById( 'loan').value);
+        const rate  = parseFloat(document.getElementById( 'rate').value) / 100;
+        const years = parseInt  (document.getElementById('years').value, 10);
+        const extra = parseFloat(document.getElementById('extra').value) || 0;
+
+        if (!loan || !rate || !years || years <= 0) {
+            document.getElementById('monthlyPayment').value = '';
+            document.getElementById('totalPaid').value = '';
+            document.getElementById('totalInterest').value = '';
+            return;
+        }
+
+        const monthlyRate = rate / 12;
+        const totalMonths = years * 12;
+
+        const baseMonthlyPayment = (loan * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -totalMonths));
+        const monthlyPayment = baseMonthlyPayment + extra;
+
+        let remainingBalance = loan;
+        let totalPaid = 0;
+        let totalInterest = 0;
+        let months = 0;
+
+        while (remainingBalance > 0) {
+            const interest = remainingBalance * monthlyRate;
+            const principal = monthlyPayment - interest;
+
+            if (remainingBalance < monthlyPayment) {
+                totalPaid += remainingBalance + interest;
+                totalInterest += interest;
+                break;
+            }
+
+            remainingBalance -= principal;
+            totalPaid += monthlyPayment;
+            totalInterest += interest;
+            months++;
+        }
+
+        document.getElementById('monthlyPayment').value = monthlyPayment.toFixed(2);
+        document.getElementById('totalPaid').value = totalPaid.toFixed(2);
+        document.getElementById('totalInterest').value = totalInterest.toFixed(2);
+    }
+
+    document.querySelectorAll('#loan, #rate, #years, #extra').forEach(input => {
+        input.addEventListener('input', calculateLoan);
+    });
+</script>
+
+</main>
+</body>
+</html>
+
