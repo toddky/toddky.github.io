@@ -1,0 +1,47 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/css/fira_code.css"/>
+<link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+<head>
+  <title>My Website</title>
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/posts">Blog</a>
+    <a href="/awesome">Awesome</a>
+    <a href="/apps">Apps</a>
+    <a href="/about">About</a>
+    
+  
+</nav>
+
+<main>
+
+    April 1, 2025
+    <h1>XSS</h1>
+    <style>
+  #inputText, #outputText {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+</style>
+<input type="text" id="inputText" placeholder="Enter your name">
+<div id="outputText"></div>
+<script>
+  const input = document.getElementById('inputText');
+  const output = document.getElementById('outputText');
+
+  input.addEventListener('input', () => {
+    // Use textContent to prevent XSS
+    output.textContent = `Hello, ${input.value}`;
+  });
+</script>
+
+</main>
+</body>
+</html>
+
