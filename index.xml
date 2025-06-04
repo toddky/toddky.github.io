@@ -6,7 +6,16 @@
     <description>Recent content in Title Field on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2025 09:00:00 -0600</lastBuildDate><atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Apr 2025 09:00:00 -0600</lastBuildDate><atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XSS</title>
+      <link>https://toddky.github.io/apps/xss/</link>
+      <pubDate>Tue, 01 Apr 2025 09:00:00 -0600</pubDate>
+      
+      <guid>https://toddky.github.io/apps/xss/</guid>
+      <description> </description>
+    </item>
+    
     <item>
       <title>Binomial</title>
       <link>https://toddky.github.io/apps/binomial/</link>
@@ -31,7 +40,7 @@
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       
       <guid>https://toddky.github.io/awesome/graphene-os/</guid>
-      <description>Setup GrapheneOS Web Installer Contacts Export Google contacts Main NordVPN APK or use NordPVN with OpenVPN for Android using OpenVPN config files Mullvad VPN. Download from F-Droid DeGoogle Google Play Store Droid-ify from F-Droid F-Droid client Auorora Store from F-Droid An unofficial, FOSS client to Google Play Works with or without Google Play Services Maps Still trying to figure out the best alternative. OpenStreetMap OsmAnd Does not have live traffic ‼️ But you can overlay Google traffic data Organic Maps Waze Live Map ‼️ Waze is owned by Google Gboard Disable network access Preferences -&amp;gt; Number row -&amp;gt; Enabled Preferences -&amp;gt; Long press for symbols -&amp;gt; Enabled Preferences -&amp;gt; Key Long press delay -&amp;gt; 100 ms Proton Mail: web download, Play Store Proton Drive Photos Ente Photos Fossify Gallery from F-Droid NewPipe: Ad-free YouTube app Social Media Use a Redlib instance in your web browser.</description>
+      <description>Setup GrapheneOS Web Installer Contacts Export Google contacts Main NordVPN APK or use NordPVN with OpenVPN for Android using OpenVPN config files Mullvad VPN. Download from F-Droid DeGoogle Google Play Store Droid-ify: F-Droic client. Download from F-Droid or GitHub Auorora Store: Download from F-Droid. GitHub Repo An unofficial, FOSS client to Google Play Works with or without Google Play Services Maps Still trying to figure out the best alternative. OpenStreetMap OsmAnd Does not have live traffic ‼️ But you can overlay Google traffic data Organic Maps Waze Live Map ‼️ Waze is owned by Google Proton Mail: web download, Play Store Proton Drive Photos Ente Photos Fossify Gallery from F-Droid NewPipe: Ad-free YouTube app Social Media Use a Redlib instance in your web browser.</description>
     </item>
     
     <item>
