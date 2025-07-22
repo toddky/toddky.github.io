@@ -1,5 +1,27 @@
 /* vim: ft=css ts=2 et sw=0 sts=0 */
 
+/* =============================================================================
+/* INFO
+/* ========================================================================== */
+/* padding: vertical
+/* padding: vertical horizontal
+/* padding: top horizontal bottom
+/* padding: top right bottom left
+ */
+
+
+/* =============================================================================
+/* TODO
+/* ========================================================================== */
+/* REVISIT: Media queries: https://wizardzines.com/comics/media-queries/ */
+
+/* TODO: https://gomakethings.com/creating-a-semantic-color-palette/ */
+/* TODO: https://www.howtogeek.com/get-a-clean-attractive-site-with-lines-of-css/ */
+
+
+/* =============================================================================
+/* CSS
+/* ========================================================================== */
 body {
   margin: 0;
   padding: 0;
