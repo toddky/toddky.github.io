@@ -64,19 +64,22 @@ a:visited {
 nav {
   font-weight: 400;
   display: flex;
-  background-color: #555;
+  background-color: #24273a;
   padding: 0 0;
 }
 
 /* TODO: Figure out why this CSS isn't taking effect */
-nav a:link {
-  color: white;
+nav a {
+  color: #e0e8f8;
   text-decoration: none;
   padding: 10px 20px;
   margin: 0 0px;
 }
+nav a:visited {
+  color: #e0e8f8;
+}
 nav a:hover {
-  background-color: #88f;
+  background-color: #6060a0;
 }
 
 main {
