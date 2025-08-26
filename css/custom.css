@@ -27,8 +27,10 @@ body {
   padding: 0;
   font-family: 'Cascadia Code PL', monospace;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
+  background-color: #283050;
+  color: #e0e8f8;
 }
 
 h1 {
@@ -52,12 +54,22 @@ h5 {
   font-weight: 700;
 }
 
+a:link {
+  color: #a0a0f8;
+}
+a:visited {
+  color: #f0a0f8;
+}
+
 nav {
+  font-weight: 400;
   display: flex;
   background-color: #555;
   padding: 0 0;
 }
-nav a {
+
+/* TODO: Figure out why this CSS isn't taking effect */
+nav a:link {
   color: white;
   text-decoration: none;
   padding: 10px 20px;
@@ -73,12 +85,16 @@ main {
 }
 
 p code {
-  background-color: #ddd;
+  background-color: #24273a;
+  color: #f5a97f;
   padding: 0px 3px 0px;
+  border-radius: 3px;
 }
 li code {
-  background-color: #ddd;
-  padding: 0px 3px 0px;
+  background-color: #24273a;
+  color: #f5a97f;
+  padding: 1px 3px 1px;
+  border-radius: 3px;
 }
 div pre code span {
   padding: 0px 0px 0px 0px;
@@ -87,5 +103,6 @@ div.highlight pre {
   margin:  0px 0px 0px 0px;
   border:  0px 0px 0px 0px;
   padding: 10px 10px 10px 10px;
+  border-radius: 8px;
 }
 
