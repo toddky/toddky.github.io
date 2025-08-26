@@ -22,15 +22,8 @@
 /* =============================================================================
 /* CSS
 /* ========================================================================== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cascadia Code PL', monospace;
-  font-size: 14px;
-  font-weight: 300;
-  font-style: normal;
-  background-color: #283050;
-  color: #e0e8f8;
+.date {
+  padding: 10 0 0;
 }
 
 h1 {
@@ -52,6 +45,17 @@ h4 {
 h5 {
   font-size: 1.1em;
   font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cascadia Code PL', monospace;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #283050;
+  color: #e0e8f8;
 }
 
 a:link {
@@ -107,5 +111,15 @@ div.highlight pre {
   border:  0px 0px 0px 0px;
   padding: 10px 10px 10px 10px;
   border-radius: 8px;
+}
+
+/* Bullets */
+ul {
+  padding-left: 20px;
+  margin-left: 0;
+}
+ol {
+  padding-left: 20px;
+  margin-left: 0;
 }
 
