@@ -31,10 +31,21 @@
     font-family: monospace;
   }
 </style>
-<textarea id="textdump" placeholder="Type something here..."></textarea>
+<details>
+  <summary>Edit...</summary>
+  <textarea id="textdump" placeholder="Type something here..."></textarea>
+</details>
+<pre id=display></pre>
 <script>
+  function updateDisplay(text) {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const htmlWithLinks = text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+    document.getElementById('display').innerHTML = htmlWithLinks;
+  }
+
   document.getElementById('textdump').addEventListener('input', function() {
     const text = this.value;
+    updateDisplay(text);
     const base64Text = btoa(unescape(encodeURIComponent(text)));
     const newUrl = window.location.pathname + '#' + base64Text;
     window.history.replaceState({}, '', newUrl);
@@ -47,6 +58,7 @@
       try {
         const text = decodeURIComponent(escape(atob(hash)));
         document.getElementById('textdump').value = text;
+        updateDisplay(text);
       } catch (e) {
         console.error('Failed to decode base64 data:', e);
       }
