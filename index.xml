@@ -6,7 +6,16 @@
     <description>Recent content in Title Field on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Jun 2025 13:00:00 -0600</lastBuildDate><atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://toddky.github.io/awesome/programming/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://toddky.github.io/awesome/programming/</guid>
+      <description>Key Concepts Cognitive Load Reduce complex conditionals Remove nested ifs with early returns </description>
+    </item>
+    
     <item>
       <title>Text Dump</title>
       <link>https://toddky.github.io/apps/dump/</link>
