@@ -6,14 +6,24 @@
     <description>Recent content in Title Field on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Send Slack Message</title>
+      <link>https://toddky.github.io/apps/send_slack/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://toddky.github.io/apps/send_slack/</guid>
+      <description>This will send a Slack Message using a Slack webhook.
+Slack Webhook URL: User ID: Message: Send Message</description>
+    </item>
+    
     <item>
       <title>Programming</title>
       <link>https://toddky.github.io/awesome/programming/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
       
       <guid>https://toddky.github.io/awesome/programming/</guid>
-      <description>Key Concepts Cognitive Load Reduce complex conditionals Remove nested ifs with early returns </description>
+      <description>Garbage Code Cognitive Load Reduce complex conditionals Remove nested ifs with early returns Don&amp;rsquo;t abuse DRY Don&amp;rsquo;t tightly couple Why I Hate Frameworks How to Not Write Garbage Code by Linus Torvalds 5 Software Engineering Foot-guns Writing clever code instead of clear code Not being willing to “throw it all away” Creating abstractions prematurely Not properly respecting the complexity of distributed systems Waiting too long to ask for help Architecture How Instagram scaled to 14 million users with only 3 engineers Miscellaneous Learnings from 5 years of tech startup code audits </description>
     </item>
     
     <item>
@@ -58,7 +68,7 @@
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       
       <guid>https://toddky.github.io/awesome/graphene-os/</guid>
-      <description>Setup GrapheneOS Web Installer Contacts Export Google contacts Main NordVPN APK or use NordPVN with OpenVPN for Android using OpenVPN config files Mullvad VPN. Download from F-Droid DeGoogle Google Play Store Droid-ify: F-Droic client. Download from F-Droid or GitHub Auorora Store: Download from F-Droid. GitHub Repo An unofficial, FOSS client to Google Play Works with or without Google Play Services Maps Still trying to figure out the best alternative. OpenStreetMap OsmAnd Does not have live traffic ‼️ But you can overlay Google traffic data Organic Maps Waze Live Map ‼️ Waze is owned by Google Proton Mail: web download, Play Store Proton Drive Photos Ente Photos Fossify Gallery from F-Droid NewPipe: Ad-free YouTube app Social Media reddit Use a Redlib instance Or patch an app with ReVanced Twitter/X: Use a Nitter instance Instagram: Barinsta (formerly InstaGrabber) Other Tools Gboard: Keyboard from Google but you can disable network access Preferences -&amp;gt; Number row -&amp;gt; Enabled Preferences -&amp;gt; Long press for symbols -&amp;gt; Enabled Preferences -&amp;gt; Key Long press delay -&amp;gt; 100 ms Private Lock from F-Droid.</description>
+      <description>Setup GrapheneOS Web Installer Contacts Export Google contacts App compatibility Main Apps NordVPN APK or use NordPVN with OpenVPN for Android using OpenVPN config files Mullvad VPN. Download from F-Droid DeGoogle Apps Google Play Store Droid-ify: F-Droic client. Download from F-Droid or GitHub Auorora Store: Download from F-Droid. GitHub Repo An unofficial, FOSS client to Google Play Works with or without Google Play Services Maps Still trying to figure out the best alternative.</description>
     </item>
     
     <item>

@@ -1,0 +1,167 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/cascadia_font.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+  <title>My Website</title>
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/posts">Blog</a>
+    <a href="/awesome">Awesome</a>
+    <a href="/apps">Apps</a>
+    <a href="/about">About</a>
+    
+  
+</nav>
+
+<main>
+
+    <div class="date">2025-10-10</div>
+    <h1>Send Slack Message</h1>
+    <style>
+  .input-group {
+    margin: 10px 0;
+  }
+
+  .input-group input, .input-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .input-group textarea {
+    height: 60px;
+    resize: vertical;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+</style>
+<p>This will send a Slack Message using a <a href="https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/">Slack webhook</a>.</p>
+<div class="input-group">
+  <label for="webhookUrl">Slack Webhook URL:</label>
+  <input type="text" id="webhookUrl" placeholder="https://hooks.slack.com/triggers/..." />
+</div>
+<div class="input-group">
+  <label for="userId">User ID:</label>
+  <input type="text" id="userId" placeholder="U123456789" />
+</div>
+<div class="input-group">
+  <label for="message">Message:</label>
+  <textarea id="message" placeholder="Hello, this is a test message"></textarea>
+</div>
+<p><button id="sendButton" onclick="sendSlackMessage()">Send Message</button></p>
+<script>
+// Update URL when inputs change
+function updateURL() {
+  const webhookUrl = document.getElementById('webhookUrl').value;
+  const userId = document.getElementById('userId').value;
+
+  if (webhookUrl || userId) {
+    const data = {
+      webhook: webhookUrl,
+      user_id: userId
+    };
+    const jsonStr = JSON.stringify(data);
+    const base64Str = btoa(jsonStr);
+    const newUrl = window.location.pathname + '#' + base64Str;
+    window.history.replaceState({}, '', newUrl);
+  }
+}
+
+// Add event listeners to update URL when inputs change
+document.getElementById('webhookUrl').addEventListener('input', updateURL);
+document.getElementById('userId').addEventListener('input', updateURL);
+
+// Load parameters from URL hash on page load
+window.addEventListener('load', function() {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    try {
+      const jsonStr = atob(hash);
+      const data = JSON.parse(jsonStr);
+
+      if (data.webhook) {
+        document.getElementById('webhookUrl').value = data.webhook;
+      }
+      if (data.user_id) {
+        document.getElementById('userId').value = data.user_id;
+      }
+    } catch (e) {
+      console.error('Failed to decode URL data:', e);
+    }
+  }
+});
+
+async function sendSlackMessage() {
+  const webhookUrl = document.getElementById('webhookUrl').value;
+  const userId = document.getElementById('userId').value;
+  const message = document.getElementById('message').value;
+  const sendButton = document.getElementById('sendButton');
+
+  // Validate inputs
+  if (!webhookUrl || !userId || !message) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  // Disable button and show loading
+  sendButton.disabled = true;
+  sendButton.textContent = 'Sending...';
+
+  const body = {
+    "user_id": userId,
+    "message": message
+  };
+
+  try {
+    // Send Slack message via webhook
+    const slackResponse = await fetch(webhookUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    // With no-cors mode, we can't read the response, but no error means it likely worked
+    alert('Slack notification sent');
+
+  } catch (error) {
+    if (error.message.includes('Failed to fetch')) {
+      alert('CORS Error: Cannot send directly from browser. Use a proxy server or the Python script instead.');
+    } else {
+      alert(`Error: ${error.message}`);
+    }
+  } finally {
+    sendButton.disabled = false;
+    sendButton.textContent = 'Send Message';
+  }
+}
+</script>
+
+</main>
+</body>
+</html>
+

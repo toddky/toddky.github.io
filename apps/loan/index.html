@@ -21,33 +21,59 @@
     <div class="date">2024-11-04</div>
     <h1>Loan Calculator</h1>
     <style>
-  #loan, #rate, #years, #extra, #monthlyPayment, #totalPaid, #totalInterest {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 0px 0px 0px 0px;
-    padding: 10px;
-    font-size: 16px;
+  .input-group {
+    margin: 10px 0;
   }
 
-  h5 {
-    margin: 10px 00px 0px 0px;
+  .input-group label {
+    display       : block;
+    margin-bottom : 5px;
+    font-weight   : bold;
+  }
+
+  .input-group input {
+    width         : 100%;
+    max-width     : 600px;
+    padding       : 10px;
+    border        : 1px solid #ccc;
+    border-radius : 4px;
+    font-size     : 16px;
+    font-family   : monospace;
+  }
+
+  .input-group input[readonly] {
+    background-color : #eee;
+    color            : #666;
   }
 </style>
-<h5 for="loan">Loan Amount ($):</h5>
-<input type="number" id="loan" placeholder="Enter loan amount">
-<h5 for="rate">Annual Interest Rate (%):</h5>
-<input type="number" id="rate" placeholder="Enter interest rate">
-<h5 for="years">Loan Term (Years):</h5>
-<input type="number" id="years" placeholder="Enter number of years">
-<h5 for="extra">Extra Monthly Payment ($):</h5>
-<input type="number" id="extra" placeholder="Enter extra payment (optional)">
-<h5 for="monthlyPayment">Monthly Payment ($):</h5>
-<input type="text" id="monthlyPayment" readonly>
-<h5 for="totalPaid">Total Amount Paid ($):</h5>
-<input type="text" id="totalPaid" readonly>
-<h5 for="totalInterest">Total Interest Paid ($):</h5>
-<input type="text" id="totalInterest" readonly>
+<div class="input-group">
+  <label for="loan">Loan Amount ($):</label>
+  <input type="number" id="loan" placeholder="Enter loan amount">
+</div>
+<div class="input-group">
+  <label for="rate">Annual Interest Rate (%):</label>
+  <input type="number" id="rate" placeholder="Enter interest rate">
+</div>
+<div class="input-group">
+  <label for="years">Loan Term (Years):</label>
+  <input type="number" id="years" placeholder="Enter number of years">
+</div>
+<div class="input-group">
+  <label for="extra">Extra Monthly Payment ($):</label>
+  <input type="number" id="extra" placeholder="Enter extra payment (optional)">
+</div>
+<div class="input-group">
+  <label for="monthlyPayment">Monthly Payment ($):</label>
+  <input type="text" id="monthlyPayment" readonly>
+</div>
+<div class="input-group">
+  <label for="totalPaid">Total Amount Paid ($):</label>
+  <input type="text" id="totalPaid" readonly>
+</div>
+<div class="input-group">
+  <label for="totalInterest">Total Interest Paid ($):</label>
+  <input type="text" id="totalInterest" readonly>
+</div>
 <script>
     function calculateLoan() {
         const loan  = parseFloat(document.getElementById( 'loan').value);
