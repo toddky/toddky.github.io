@@ -23,7 +23,7 @@ Slack Webhook URL: User ID: Message: Send Message</description>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
       
       <guid>https://toddky.github.io/awesome/programming/</guid>
-      <description>Garbage Code Cognitive Load Reduce complex conditionals Remove nested ifs with early returns Don&amp;rsquo;t abuse DRY Don&amp;rsquo;t tightly couple Why I Hate Frameworks How to Not Write Garbage Code by Linus Torvalds 5 Software Engineering Foot-guns Writing clever code instead of clear code Not being willing to “throw it all away” Creating abstractions prematurely Not properly respecting the complexity of distributed systems Waiting too long to ask for help Architecture How Instagram scaled to 14 million users with only 3 engineers Miscellaneous Learnings from 5 years of tech startup code audits </description>
+      <description>Garbage Code Cognitive Load Reduce complex conditionals Remove nested ifs with early returns Don&amp;rsquo;t abuse DRY Don&amp;rsquo;t tightly couple Why I Hate Frameworks How to Not Write Garbage Code by Linus Torvalds 5 Software Engineering Foot-guns Writing clever code instead of clear code Not being willing to “throw it all away” Creating abstractions prematurely Not properly respecting the complexity of distributed systems Waiting too long to ask for help Simplicity Visual Readability Patterns Keep conditional tests as short as possible Minimize nested logic Short lived variables 8 Lines of Code &amp;ldquo;If you find you need an extension to your IDE to understand what&amp;rsquo;s going on, it&amp;rsquo;s probably not simple.</description>
     </item>
     
     <item>

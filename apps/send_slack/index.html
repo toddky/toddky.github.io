@@ -138,6 +138,9 @@ async function sendSlackMessage() {
     // Send Slack message via webhook
     const slackResponse = await fetch(webhookUrl, {
       method: 'POST',
+      // We can't read the response with no-cors mode
+      // Why no-cors is needed:
+      // CORS Error: Cannot send directly from browser. Use a proxy server or the Python script instead.
       mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json'
@@ -145,7 +148,7 @@ async function sendSlackMessage() {
       body: JSON.stringify(body)
     });
 
-    // With no-cors mode, we can't read the response, but no error means it likely worked
+    document.getElementById('message').value = '';
     alert('Slack notification sent');
 
   } catch (error) {
