@@ -11,6 +11,16 @@
 
 
 /* =============================================================================
+ * REFERENCES
+ * =============================================================================
+ * The least amount of CSS for a decent looking site
+ * https://thecascade.dev/article/least-amount-of-css/
+ *
+ * Color pattern generator
+ * https://oklchroma.utilitybend.com/
+ */
+
+/* =============================================================================
 /* TODO
 /* ========================================================================== */
 /* REVISIT: Media queries: https://wizardzines.com/comics/media-queries/ */
@@ -18,12 +28,61 @@
 /* TODO: https://gomakethings.com/creating-a-semantic-color-palette/ */
 /* TODO: https://www.howtogeek.com/get-a-clean-attractive-site-with-lines-of-css/ */
 
+/* =============================================================================
+ * EXAMPLES
+ * ========================================================================== */
+
+/* full red */
+.red {
+  color: rgb(255, 0, 0);
+}
+/* red, 50% opacity */
+.red-50 {
+  color: rgb(255, 0, 0, 0.5);
+}
+
+/* red, 50% opacity */
+.red-50 {
+  color: rgb(255 0 0 / 0.5);
+}
+
+.green {
+  color: rgb(0 255 0);
+}
+
+.also-green {
+  color: rgb(0 100% 0);
+}
+
+.toast {
+  --toast-color: #222;
+
+  color: hsl(from var(--toast-color) h s 15%);
+  border: 2px solid var(--toast-color);
+  background: hsl(from var(--toast-color) h s 90%);
+  box-shadow: 0 12px 12px -8px hsl(from var(--toast-color) h s l / 0.325);
+}
+
+[data-toast="info"] {
+  --toast-color: #0362fc;
+}
+
+[data-toast="error"] {
+  --toast-color: hsl(0 100% 50%);
+}
+
 
 /* =============================================================================
 /* MAIN
 /* ========================================================================== */
 .date {
   padding: 10 0 0;
+}
+
+main {
+  width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+  padding: 0px 10px;
 }
 
 h1 {
@@ -51,12 +110,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cascadia Code PL', monospace;
-  font-size: 14px;
+  line-height: 1.25;
+  font-size: 1rem;
   font-weight: 300;
   font-style: normal;
   background-color: #283050;
   color: #e0e8f8;
 }
+
+/* =============================================================================
+/* MEDIA
+/* ========================================================================== */
+img, svg, video {
+  max-width: 100%;
+  display: block;
+}
+
 
 /* =============================================================================
 /* LINKS
@@ -87,11 +156,6 @@ nav a:visited {
 }
 nav a:hover {
   background-color: #6060a0;
-}
-
-main {
-  padding: 0px 10px;
-  margin: 0px 0px;
 }
 
 p code {

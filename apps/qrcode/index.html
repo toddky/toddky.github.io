@@ -32,19 +32,34 @@
   label {
     font-weight: bold;
   }
+  #qrcode-container {
+    background-color: white;
+    border: 40px solid white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    margin: 20px 0;
+  }
+  #qrcode-container.show {
+    display: inline-block;
+  }
 </style>
 <input type="text" id="input-text" placeholder="Type something..." oninput="generate_qr()">
-<div id="qrcode"></div>
+<div id="qrcode-container">
+  <div id="qrcode"></div>
+</div>
 <script>
   let qr;
 
   function generate_qr() {
     let text = document.getElementById('input-text').value;
+    const container = document.getElementById('qrcode-container');
 
     // Clear previous code
     document.getElementById('qrcode').innerHTML = '';
 
     if (text.trim() === '') {
+      container.classList.remove('show');
       return
     }
 
@@ -53,6 +68,8 @@
       width: 400,
       height: 400
     });
+
+    container.classList.add('show');
   }
 </script>
 <script>

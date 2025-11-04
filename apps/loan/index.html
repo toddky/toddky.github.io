@@ -45,35 +45,51 @@
     background-color : #eee;
     color            : #666;
   }
+
+  .input-group output {
+    display          : block;
+    width            : 100%;
+    max-width        : 600px;
+    padding          : 10px;
+    border           : 1px solid #ccc;
+    border-radius    : 4px;
+    font-size        : 16px;
+    font-family      : monospace;
+    background-color : #eee;
+    color            : #666;
+    min-height       : 1.2em;
+  }
 </style>
-<div class="input-group">
-  <label for="loan">Loan Amount ($):</label>
-  <input type="number" id="loan" placeholder="Enter loan amount">
-</div>
-<div class="input-group">
-  <label for="rate">Annual Interest Rate (%):</label>
-  <input type="number" id="rate" placeholder="Enter interest rate">
-</div>
-<div class="input-group">
-  <label for="years">Loan Term (Years):</label>
-  <input type="number" id="years" placeholder="Enter number of years">
-</div>
-<div class="input-group">
-  <label for="extra">Extra Monthly Payment ($):</label>
-  <input type="number" id="extra" placeholder="Enter extra payment (optional)">
-</div>
-<div class="input-group">
-  <label for="monthlyPayment">Monthly Payment ($):</label>
-  <input type="text" id="monthlyPayment" readonly>
-</div>
-<div class="input-group">
-  <label for="totalPaid">Total Amount Paid ($):</label>
-  <input type="text" id="totalPaid" readonly>
-</div>
-<div class="input-group">
-  <label for="totalInterest">Total Interest Paid ($):</label>
-  <input type="text" id="totalInterest" readonly>
-</div>
+<form id="loanCalculator">
+  <div class="input-group">
+    <label for="loan">Loan Amount ($):</label>
+    <input type="number" id="loan" placeholder="Enter loan amount">
+  </div>
+  <div class="input-group">
+    <label for="rate">Annual Interest Rate (%):</label>
+    <input type="number" id="rate" placeholder="Enter interest rate">
+  </div>
+  <div class="input-group">
+    <label for="years">Loan Term (Years):</label>
+    <input type="number" id="years" placeholder="Enter number of years">
+  </div>
+  <div class="input-group">
+    <label for="extra">Extra Monthly Payment ($):</label>
+    <input type="number" id="extra" placeholder="Enter extra payment (optional)">
+  </div>
+  <div class="input-group">
+    <label for="monthlyPayment">Monthly Payment ($):</label>
+    <output id="monthlyPayment" for="loan rate years extra"></output>
+  </div>
+  <div class="input-group">
+    <label for="totalPaid">Total Amount Paid ($):</label>
+    <output id="totalPaid" for="loan rate years extra"></output>
+  </div>
+  <div class="input-group">
+    <label for="totalInterest">Total Interest Paid ($):</label>
+    <output id="totalInterest" for="loan rate years extra"></output>
+  </div>
+</form>
 <script>
     function calculateLoan() {
         const loan  = parseFloat(document.getElementById( 'loan').value);
@@ -82,9 +98,9 @@
         const extra = parseFloat(document.getElementById('extra').value) || 0;
 
         if (!loan || !rate || !years || years <= 0) {
-            document.getElementById('monthlyPayment').value = '';
-            document.getElementById('totalPaid').value = '';
-            document.getElementById('totalInterest').value = '';
+            document.getElementById('monthlyPayment').textContent = '';
+            document.getElementById('totalPaid').textContent = '';
+            document.getElementById('totalInterest').textContent = '';
             return;
         }
 
@@ -115,9 +131,9 @@
             months++;
         }
 
-        document.getElementById('monthlyPayment').value = monthlyPayment.toFixed(2);
-        document.getElementById('totalPaid').value = totalPaid.toFixed(2);
-        document.getElementById('totalInterest').value = totalInterest.toFixed(2);
+        document.getElementById('monthlyPayment').textContent = monthlyPayment.toFixed(2);
+        document.getElementById('totalPaid').textContent = totalPaid.toFixed(2);
+        document.getElementById('totalInterest').textContent = totalInterest.toFixed(2);
     }
 
     document.querySelectorAll('#loan, #rate, #years, #extra').forEach(input => {
