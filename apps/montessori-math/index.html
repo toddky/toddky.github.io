@@ -1,0 +1,86 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/cascadia_font.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+  <title>My Website</title>
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/posts">Blog</a>
+    <a href="/awesome">Awesome</a>
+    <a href="/apps">Apps</a>
+    <a href="/about">About</a>
+    
+  
+</nav>
+
+<main>
+
+    <div class="date">2026-01-25</div>
+    <h1>Montessori Math</h1>
+    <style>
+  #output {
+    white-space: pre-wrap;
+    font-family: monospace;
+  }
+</style>
+<input type="number" id="fixedNum" placeholder="e.g., 7 or -3">
+<button onclick="handleGenerateClick()">Generate</button>
+<button onclick="window.print()">Print</button>
+<pre id="output"></pre>
+<script>
+  function generateProblems(number) {
+    let lines = [];
+
+    for (let row = 0; row < 26; row++) {
+      let rowProblems = [];
+      for (let col = 0; col < 3; col++) {
+        const operand = Math.floor(Math.random() * 9) + 1;
+        const order = Math.random() >= 0.5;
+        let problem;
+        if (order) {
+          problem = `${number} + ${operand} = _____`;
+        } else {
+          problem = `${operand} + ${number} = _____`;
+        }
+        rowProblems.push(problem.padEnd(25));
+      }
+      lines.push(rowProblems.join(''));
+    }
+
+    return lines.join('\n');
+  }
+
+  function updateURL(number) {
+    const newUrl = window.location.pathname + '?number=' + number;
+    window.history.replaceState({}, '', newUrl);
+  }
+
+  function handleGenerateClick() {
+    const number = parseInt(document.getElementById('fixedNum').value);
+    if (isNaN(number)) {
+      alert('Enter a number');
+      return;
+    }
+
+    const output = generateProblems(number);
+    document.getElementById('output').textContent = output;
+    updateURL(number);
+  }
+
+  window.addEventListener('load', function() {
+    const params = new URLSearchParams(window.location.search);
+    const number = params.get('number');
+
+    if (number) {
+      document.getElementById('fixedNum').value = number;
+    }
+  });
+</script>
+
+</main>
+</body>
+</html>
+
