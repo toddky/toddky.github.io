@@ -27,12 +27,34 @@
     max-width: 600px;
     height: 70vh;
     margin: 10px auto;
-    background: linear-gradient(to bottom, #0b1a3f 0%, #1b3a6b 35%, #7fbf4d 70%, #5da23a 100%);
+    background: linear-gradient(to bottom, #5ea8d8 0%, #9eccea 45%, #d5edf7 60%, #d5edf7 100%);
     border-radius: 12px;
     overflow: hidden;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+  }
+  .hill {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    display: block;
+  }
+  .hill-back {
+    height: 76%;
+  }
+  .hill-front {
+    height: 54%;
+  }
+  .barn {
+    position: absolute;
+    left: 70%;
+    bottom: 58%;
+    width: clamp(50px, 11vw, 70px);
+    pointer-events: none;
+    filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.25));
   }
   .cow {
     position: absolute;
@@ -166,6 +188,21 @@
   }
 </style>
 <div id="field">
+  <svg class="hill hill-back" viewBox="0 0 600 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,110 Q300,10 600,40 L600,150 L0,150 Z" fill="#7fb04a"/>
+  </svg>
+  <svg class="barn" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" aria-label="Red barn">
+    <rect x="10" y="40" width="80" height="45" fill="#b22222"/>
+    <polygon points="5,42 50,10 95,42" fill="#8b0000"/>
+    <rect x="40" y="55" width="20" height="30" fill="#5a2a11"/>
+    <line x1="50" y1="55" x2="50" y2="85" stroke="#d9c5a0" stroke-width="1.5"/>
+    <line x1="40" y1="70" x2="60" y2="70" stroke="#d9c5a0" stroke-width="1.5"/>
+    <rect x="20" y="50" width="10" height="10" fill="#cce6ff"/>
+    <rect x="70" y="50" width="10" height="10" fill="#cce6ff"/>
+  </svg>
+  <svg class="hill hill-front" viewBox="0 0 600 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,80 Q300,20 600,110 L600,150 L0,150 Z" fill="#5a8a35"/>
+  </svg>
   <div id="ufo">
     <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-label="UFO">
       <ellipse cx="60" cy="40" rx="50" ry="14" fill="#8a94a6"/>
@@ -207,7 +244,7 @@
     const pos = [];
     while (pos.length < count) {
       const x = 8 + Math.random() * 65;
-      const y = 28 + Math.random() * 60;
+      const y = 58 + Math.random() * 32;
       if (pos.every(p => Math.hypot(p.x - x, p.y - y) > 22)) {
         pos.push({ x, y });
       }
