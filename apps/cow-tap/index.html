@@ -1,0 +1,395 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/cascadia_font.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+  <title>My Website</title>
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/posts">Blog</a>
+    <a href="/awesome">Awesome</a>
+    <a href="/apps">Apps</a>
+    <a href="/about">About</a>
+    
+  
+</nav>
+
+<main>
+
+    <div class="date">2026-07-28</div>
+    <h1>Vicki&#39;s Interstellar Cattle Rustling</h1>
+    <style>
+  #field {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 70vh;
+    margin: 10px auto;
+    background: linear-gradient(to bottom, #0b1a3f 0%, #1b3a6b 35%, #7fbf4d 70%, #5da23a 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .cow {
+    position: absolute;
+    font-size: clamp(44px, 16vw, 88px);
+    line-height: 1;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in, filter 0.35s ease;
+  }
+  .cow.beaming {
+    transform: translateY(-160px) scale(0.15) rotate(720deg);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .cow.frozen {
+    filter: hue-rotate(160deg) saturate(2.2) brightness(1.4);
+  }
+  .cow.shattering {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+  }
+  .cow.exploding {
+    opacity: 0;
+    transform: scale(1.4);
+    pointer-events: none;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+  }
+  #ufo {
+    position: absolute;
+    left: -25%;
+    top: 8%;
+    width: clamp(64px, 22vw, 110px);
+    height: auto;
+    pointer-events: none;
+    transition: left 0.55s cubic-bezier(0.3, 0.8, 0.4, 1);
+    filter: drop-shadow(0 4px 6px rgba(180, 220, 255, 0.4));
+  }
+  #ufo svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .beam {
+    position: absolute;
+    width: 60px;
+    height: 0;
+    margin-left: -30px;
+    clip-path: polygon(35% 0, 65% 0, 100% 100%, 0% 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease, height 0.4s ease;
+    filter: blur(1px) drop-shadow(0 0 6px currentColor);
+  }
+  .beam.tractor {
+    background: linear-gradient(to bottom, rgba(200, 255, 220, 0.9), rgba(140, 255, 200, 0.35));
+    color: rgba(160, 255, 200, 0.8);
+  }
+  .beam.laser {
+    background: linear-gradient(to bottom, rgba(255, 220, 220, 0.95), rgba(255, 60, 60, 0.4));
+    color: rgba(255, 90, 90, 0.8);
+  }
+  .beam.cryo {
+    background: linear-gradient(to bottom, rgba(220, 245, 255, 0.95), rgba(120, 200, 255, 0.4));
+    color: rgba(160, 220, 255, 0.8);
+  }
+  .laser-flash {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 100, 80, 0.5) 35%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+  .shard {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: linear-gradient(180deg, #bfe6fb 0%, #6ec6ea 100%);
+    clip-path: polygon(50% 0, 100% 30%, 80% 100%, 20% 100%, 0 30%);
+    pointer-events: none;
+    transition: transform 0.45s ease-out, opacity 0.45s ease-out;
+    filter: drop-shadow(0 0 3px rgba(160, 220, 255, 0.6));
+  }
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  .particle.hot  { background: #ffdc78; box-shadow: 0 0 8px #ff7847; }
+  .particle.warm { background: #ff8a5c; box-shadow: 0 0 6px #c2330c; }
+  #message {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: clamp(20px, 6vw, 32px);
+    color: #eaf5d8;
+    background: rgba(10, 20, 50, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #message.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #resetBtn {
+    margin-top: 16px;
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 999px;
+    background: #9be37a;
+    color: #0b1a3f;
+    cursor: pointer;
+  }
+</style>
+<div id="field">
+  <div id="ufo">
+    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-label="UFO">
+      <ellipse cx="60" cy="40" rx="50" ry="14" fill="#8a94a6"/>
+      <ellipse cx="60" cy="37" rx="46" ry="11" fill="#cdd5e0"/>
+      <ellipse cx="60" cy="28" rx="20" ry="12" fill="#7dd3fc"/>
+      <ellipse cx="60" cy="25" rx="16" ry="9" fill="#bfe6fb"/>
+      <circle cx="30" cy="40" r="3" fill="#ffe066"/>
+      <circle cx="45" cy="43" r="3" fill="#ff6b6b"/>
+      <circle cx="60" cy="45" r="3" fill="#9be37a"/>
+      <circle cx="75" cy="43" r="3" fill="#ff6b6b"/>
+      <circle cx="90" cy="40" r="3" fill="#ffe066"/>
+    </svg>
+  </div>
+  <div id="beam" class="beam tractor"></div>
+  <div id="message">
+    <div>All cows eliminated!</div>
+    <button id="resetBtn" onclick="resetGame()">Play again</button>
+  </div>
+</div>
+<script>
+  const COW = "\u{1F404}";
+  const field = document.getElementById("field");
+  const ufo = document.getElementById("ufo");
+  const beam = document.getElementById("beam");
+
+  let busy = false;
+  let effectDeck = [];
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function randomPositions(count) {
+    const pos = [];
+    while (pos.length < count) {
+      const x = 8 + Math.random() * 65;
+      const y = 28 + Math.random() * 60;
+      if (pos.every(p => Math.hypot(p.x - x, p.y - y) > 22)) {
+        pos.push({ x, y });
+      }
+    }
+    return pos;
+  }
+
+  function spawnCows() {
+    randomPositions(3).forEach(p => {
+      const cow = document.createElement("div");
+      cow.className = "cow";
+      cow.textContent = COW;
+      cow.style.left = p.x + "%";
+      cow.style.top = p.y + "%";
+      cow.addEventListener("pointerdown", () => strike(cow));
+      field.appendChild(cow);
+    });
+  }
+
+  function flyTo(targetX) {
+    ufo.style.transition = "none";
+    ufo.style.left = ufo.style.left || "-25%";
+    ufo.getBoundingClientRect();
+    ufo.style.transition = "";
+    ufo.style.left = targetX + "px";
+  }
+
+  function flyAway() {
+    ufo.style.left = "110%";
+  }
+
+  function resetUfo() {
+    ufo.style.transition = "none";
+    ufo.style.left = "-25%";
+    ufo.getBoundingClientRect();
+    ufo.style.transition = "";
+  }
+
+  function strike(cow) {
+    if (busy || cow.dataset.spent) return;
+    if (effectDeck.length === 0) return;
+
+    busy = true;
+    cow.dataset.spent = "1";
+    cow.style.pointerEvents = "none";
+    const effect = effectDeck.pop();
+    if (navigator.vibrate) navigator.vibrate(20);
+
+    const cowRect = cow.getBoundingClientRect();
+    const fieldRect = field.getBoundingClientRect();
+    const cowCenterX = cowRect.left - fieldRect.left + cowRect.width / 2;
+    const cowTopY = cowRect.top - fieldRect.top;
+
+    const ufoRect = ufo.getBoundingClientRect();
+    flyTo(cowCenterX - ufoRect.width / 2);
+
+    setTimeout(() => {
+      const ufoBottom = ufo.offsetTop + ufoRect.height;
+
+      beam.className = "beam " + (effect === "abduct" ? "tractor"
+                                : effect === "explode" ? "laser"
+                                : "cryo");
+      beam.style.left = cowCenterX + "px";
+      beam.style.top = ufoBottom + "px";
+      beam.style.height = (cowTopY - ufoBottom) + "px";
+      beam.style.opacity = "1";
+      if (navigator.vibrate) navigator.vibrate([30, 40, 30]);
+
+      setTimeout(() => {
+        if (effect === "abduct") {
+          cow.classList.add("beaming");
+        } else if (effect === "explode") {
+          explodeCow(cow, cowCenterX, cowRect);
+        } else {
+          freezeCow(cow, cowCenterX, cowRect);
+        }
+
+        setTimeout(() => { beam.style.height = "0"; }, 250);
+        setTimeout(() => { beam.style.opacity = "0"; }, 350);
+        setTimeout(() => flyAway(), 750);
+
+        setTimeout(() => {
+          cow.remove();
+          resetUfo();
+          busy = false;
+          if (document.querySelectorAll(".cow").length === 0) {
+            document.getElementById("message").classList.add("show");
+          }
+        }, 1400);
+      }, 250);
+    }, 600);
+  }
+
+  function explodeCow(cow, cowCenterX, cowRect) {
+    const fieldRect = field.getBoundingClientRect();
+    const cx = cowCenterX;
+    const cy = cowRect.top - fieldRect.top + cowRect.height / 2;
+
+    const flash = document.createElement("div");
+    flash.className = "laser-flash";
+    flash.style.left = (cx - 60) + "px";
+    flash.style.top = (cy - 60) + "px";
+    flash.style.width = "120px";
+    flash.style.height = "120px";
+    field.appendChild(flash);
+    requestAnimationFrame(() => { flash.style.opacity = "1"; });
+    setTimeout(() => { flash.style.opacity = "0"; }, 100);
+    setTimeout(() => flash.remove(), 250);
+
+    cow.classList.add("exploding");
+    if (navigator.vibrate) navigator.vibrate([50, 30, 80]);
+
+    const n = 14;
+    for (let i = 0; i < n; i++) {
+      const p = document.createElement("div");
+      p.className = "particle " + (i % 2 === 0 ? "hot" : "warm");
+      p.style.left = cx + "px";
+      p.style.top = cy + "px";
+      field.appendChild(p);
+
+      const angle = (i / n) * Math.PI * 2 + Math.random() * 0.4;
+      const dist = 40 + Math.random() * 60;
+      const dx = Math.cos(angle) * dist;
+      const dy = Math.sin(angle) * dist;
+
+      requestAnimationFrame(() => {
+        p.style.transform = "translate(" + dx + "px," + dy + "px)";
+        p.style.opacity = "0";
+      });
+      setTimeout(() => p.remove(), 500);
+    }
+  }
+
+  function freezeCow(cow, cowCenterX, cowRect) {
+    const fieldRect = field.getBoundingClientRect();
+    const cx = cowCenterX;
+    const cy = cowRect.top - fieldRect.top + cowRect.height / 2;
+
+    cow.classList.add("frozen");
+    if (navigator.vibrate) navigator.vibrate([20, 30, 20]);
+
+    setTimeout(() => {
+      cow.classList.add("shattering");
+
+      const n = 12;
+      for (let i = 0; i < n; i++) {
+        const s = document.createElement("div");
+        s.className = "shard";
+        s.style.left = (cx - 4 + (Math.random() - 0.5) * 30) + "px";
+        s.style.top = (cy - 6 + (Math.random() - 0.5) * 30) + "px";
+        s.style.transform = "rotate(" + (Math.random() * 360) + "deg)";
+        field.appendChild(s);
+
+        const angle = (i / n) * Math.PI * 2 + Math.random() * 0.5;
+        const dist = 35 + Math.random() * 55;
+        const dx = Math.cos(angle) * dist;
+        const dy = Math.sin(angle) * dist + 40; // gravity bias
+        const rot = (Math.random() - 0.5) * 360;
+
+        requestAnimationFrame(() => {
+          s.style.transform = "translate(" + dx + "px," + dy + "px) rotate(" + rot + "deg)";
+          s.style.opacity = "0";
+        });
+        setTimeout(() => s.remove(), 500);
+      }
+    }, 450);
+  }
+
+  function resetGame() {
+    document.querySelectorAll(".cow").forEach(c => c.remove());
+    document.querySelectorAll(".shard, .particle, .laser-flash").forEach(x => x.remove());
+    document.getElementById("message").classList.remove("show");
+    resetUfo();
+    effectDeck = shuffle(["abduct", "explode", "freeze"]);
+    spawnCows();
+  }
+
+  effectDeck = shuffle(["abduct", "explode", "freeze"]);
+  spawnCows();
+</script>
+
+</main>
+</body>
+</html>
+

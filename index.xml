@@ -6,181 +6,147 @@
     <description>Recent content in Title Field on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Jan 2026 10:00:00 -0600</lastBuildDate><atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jul 2026 15:47:00 -0500</lastBuildDate>
+    <atom:link href="https://toddky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vicki&#39;s Interstellar Cattle Rustling</title>
+      <link>https://toddky.github.io/apps/cow-tap/</link>
+      <pubDate>Tue, 28 Jul 2026 15:47:00 -0500</pubDate>
+      <guid>https://toddky.github.io/apps/cow-tap/</guid>
+      <description> All cows eliminated! Play again </description>
+    </item>
     <item>
       <title>Montessori Math</title>
       <link>https://toddky.github.io/apps/montessori-math/</link>
       <pubDate>Sun, 25 Jan 2026 10:00:00 -0600</pubDate>
-      
       <guid>https://toddky.github.io/apps/montessori-math/</guid>
       <description> Generate Print </description>
     </item>
-    
     <item>
       <title>Obtanium</title>
       <link>https://toddky.github.io/awesome/obtainium/</link>
       <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/awesome/obtainium/</guid>
-      <description>Download Obtainium from Obtanium
-Type URL 🔤 Keyboard https://github.com/Helium314/HeliBoard/releases 🚀 Launcher https://github.com/jrpie/launcher/releases ▶️ NewPipe (YouTube video player) https://github.com/teamnewpipe/newpipe/releases Complex apps
-Brave </description>
+      <description>Download Obtainium from Obtanium&#xA;Type URL 🔤 Keyboard https://github.com/Helium314/HeliBoard/releases 🚀 Launcher https://github.com/jrpie/launcher/releases Complex apps&#xA;NewPipe </description>
     </item>
-    
     <item>
       <title>Send Slack Message</title>
       <link>https://toddky.github.io/apps/send_slack/</link>
       <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/apps/send_slack/</guid>
-      <description>This will send a Slack Message using a Slack webhook.
-Slack Webhook URL: User ID: Message: Send Message</description>
+      <description>This will send a Slack Message using a Slack webhook.&#xA;Slack Webhook URL: User ID: Message: Send Message</description>
     </item>
-    
     <item>
       <title>Programming</title>
       <link>https://toddky.github.io/awesome/programming/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/awesome/programming/</guid>
       <description>Garbage Code Cognitive Load Reduce complex conditionals Remove nested ifs with early returns Don&amp;rsquo;t abuse DRY Don&amp;rsquo;t tightly couple Why I Hate Frameworks How to Not Write Garbage Code by Linus Torvalds 5 Software Engineering Foot-guns Writing clever code instead of clear code Not being willing to “throw it all away” Creating abstractions prematurely Not properly respecting the complexity of distributed systems Waiting too long to ask for help Simplicity Visual Readability Patterns Keep conditional tests as short as possible Minimize nested logic Short lived variables 8 Lines of Code &amp;ldquo;If you find you need an extension to your IDE to understand what&amp;rsquo;s going on, it&amp;rsquo;s probably not simple.</description>
     </item>
-    
     <item>
       <title>Text Dump</title>
       <link>https://toddky.github.io/apps/dump/</link>
       <pubDate>Mon, 30 Jun 2025 13:00:00 -0600</pubDate>
-      
       <guid>https://toddky.github.io/apps/dump/</guid>
       <description> Edit... </description>
     </item>
-    
     <item>
       <title>XSS</title>
       <link>https://toddky.github.io/apps/xss/</link>
       <pubDate>Tue, 01 Apr 2025 09:00:00 -0600</pubDate>
-      
       <guid>https://toddky.github.io/apps/xss/</guid>
       <description> </description>
     </item>
-    
     <item>
       <title>Binomial</title>
       <link>https://toddky.github.io/apps/binomial/</link>
       <pubDate>Fri, 28 Feb 2025 09:00:00 -0600</pubDate>
-      
       <guid>https://toddky.github.io/apps/binomial/</guid>
       <description> Number of Successes: Number of Trials: Probability of Success: Cumulative Probability: </description>
     </item>
-    
     <item>
       <title>QRCode</title>
       <link>https://toddky.github.io/apps/qrcode/</link>
       <pubDate>Fri, 28 Feb 2025 09:00:00 -0600</pubDate>
-      
       <guid>https://toddky.github.io/apps/qrcode/</guid>
       <description> </description>
     </item>
-    
     <item>
       <title>GrapheneOS</title>
       <link>https://toddky.github.io/awesome/graphene-os/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/awesome/graphene-os/</guid>
       <description>Setup GrapheneOS Web Installer Contacts Export Google contacts App compatibility Main Apps Obtanium μLauncher NordVPN APK or use NordPVN with OpenVPN for Android using OpenVPN config files Mullvad VPN. Download from F-Droid DeGoogle Apps Google Play Store Droid-ify: F-Droic client. Download from F-Droid or GitHub Auorora Store: Download from F-Droid. GitHub Repo An unofficial, FOSS client to Google Play Works with or without Google Play Services Maps Still trying to figure out the best alternative.</description>
     </item>
-    
     <item>
       <title>Loan Calculator</title>
       <link>https://toddky.github.io/apps/loan/</link>
       <pubDate>Mon, 04 Nov 2024 09:08:49 -0600</pubDate>
-      
       <guid>https://toddky.github.io/apps/loan/</guid>
       <description> Loan Amount ($): Annual Interest Rate (%): Loan Term (Years): Extra Monthly Payment ($): Monthly Payment ($): Total Amount Paid ($): Total Interest Paid ($): </description>
     </item>
-    
     <item>
       <title>ROT13 Cipher</title>
       <link>https://toddky.github.io/apps/rot13/</link>
       <pubDate>Mon, 04 Nov 2024 09:08:49 -0600</pubDate>
-      
       <guid>https://toddky.github.io/apps/rot13/</guid>
       <description> </description>
     </item>
-    
     <item>
       <title>Cool</title>
       <link>https://toddky.github.io/awesome/cool/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/awesome/cool/</guid>
-      <description>Fun Let&amp;rsquo;s Get Creative: A collection of high-quality, free, online creativity tools. Music Box Fun: 15-note &amp;ldquo;music box&amp;rdquo; After Dark CSS </description>
+      <description>Fun Let&amp;rsquo;s Get Creative: A collection of high-quality, free, online creativity tools. Music Box Fun: 15-note &amp;ldquo;music box&amp;rdquo; After Dark CSS Misc. ASCII to Text Rendering </description>
     </item>
-    
     <item>
       <title>League of Legends</title>
       <link>https://toddky.github.io/awesome/league/</link>
       <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/awesome/league/</guid>
       <description>Settings Borderless window 25 Settings for Season 14 Game Enable &amp;ldquo;Clamp cast target location within max range&amp;rdquo; Disable &amp;ldquo;Move camera on revive&amp;rdquo; Quick cast &amp;ldquo;Quick Cast All&amp;rdquo; (Hotkeys) Rebind normal cast to Shift+&amp;lt;ability&amp;gt; so you can still see the range indicator (Hotkeys) Attack move Enable &amp;ldquo;Attack move on cursor&amp;rdquo; (Game) Enable &amp;ldquo;Show Attack Range&amp;rdquo; (Interface) Target Champions Only (Hotkeys) Treat &amp;ldquo;Target Champions Only&amp;rdquo; as a toggle (Game) F key cycling Rebind &amp;ldquo;Select Ally 1-4&amp;rdquo; to Z, X, C, V (Hotkeys) Chat Enable &amp;ldquo;Show timestamps&amp;rdquo; Set &amp;ldquo;Change Chat Visibility&amp;rdquo; to &amp;ldquo;Same Team&amp;rdquo; In every game type /mute all and /mutepings all Interface Set &amp;ldquo;HUD Scale&amp;rdquo; to 0 Set &amp;ldquo;Map Scale&amp;rdquo; to 50-65 Enable &amp;ldquo;Show Loss of Control UI&amp;rdquo; Set &amp;ldquo;Show Names Above Healthbar&amp;rdquo; to &amp;ldquo;Champion Name&amp;rdquo; Enable &amp;ldquo;Champion highlight on camera center&amp;rdquo; Enable &amp;ldquo;Enable Line Missile display&amp;rdquo; Enable &amp;ldquo;Show Spell costs&amp;rdquo; Disable &amp;ldquo;Show Off-Screen Pings&amp;rdquo; Set &amp;ldquo;Emote Buuble Display&amp;rdquo; to Off Set &amp;ldquo;Emote Size&amp;rdquo; to Small Enable &amp;ldquo;Mute enemy Emotes&amp;rdquo; Set &amp;ldquo;Eternals Milestone Display&amp;rdquo; to &amp;ldquo;None&amp;rdquo; Video Disable &amp;ldquo;Wait for Vertical Sync&amp;rdquo; (Video) &amp;ldquo;Effects Quality&amp;rdquo; should be at least Medium &amp;ldquo;Character Quality&amp;rdquo; should be at least Medium &amp;ldquo;Environment Quality&amp;rdquo; should be Low or High because there is no difference between Low vs Medium or High vs Very High &amp;ldquo;Shadow Quality&amp;rdquo; can be turned Off Enable &amp;ldquo;Hide eye candy&amp;rdquo; Enable &amp;ldquo;Color blind mode&amp;rdquo; Sound Disable &amp;ldquo;Music Volume&amp;rdquo; Disable &amp;ldquo;Voice Volume&amp;rdquo; Disable &amp;ldquo;Ambience Volume&amp;rdquo; Lower &amp;ldquo;Ping Volume&amp;rdquo; and &amp;ldquo;Announcer Volume&amp;rdquo; lower than your &amp;ldquo;Sound FX Volume&amp;rdquo; </description>
     </item>
-    
     <item>
       <title>Austin</title>
       <link>https://toddky.github.io/awesome/austin/</link>
       <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/awesome/austin/</guid>
       <description>Government ERCOT ERCOT Supply and Demand Sign up for email alerts. Outage Map Water Quality Reports Wildfire Hub Travis Country Property Tax (Search) Weather WeatherStar Allergies 24-Hour Allergy Report (KXAN) Allergy Forecast (KXAN) Allergy Report (KVUE) Austin Pollen Fun Austin Parks Pease Park </description>
     </item>
-    
     <item>
       <title>Butter Mochi</title>
       <link>https://toddky.github.io/posts/butter-mochi/</link>
       <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/posts/butter-mochi/</guid>
       <description>About Recipe copied from Hawaiian Electric&amp;rsquo;s page for posterity. Demonstrated by: Helen Kuoha-Torco. Aloha Festivals - August 16, 2003. Ingredients: 1 lb mochiko (Japanese glutinous rice flour) 3 cups sugar 1 1/2 teaspoons baking powder 4 eggs, beaten 2 teaspoons vanilla extract 1/2 cup butter, melted 1 can (13.5 oz) coconut milk 1 can (14.5 oz) evaporated milk Directions: Preheat electric oven to 350°F. Grease a 13 x 9 x 2-inch pan or two 8 x 8 x 2-inch pans.</description>
     </item>
-    
     <item>
       <title>Web Games</title>
       <link>https://toddky.github.io/awesome/web-games/</link>
       <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/awesome/web-games/</guid>
       <description>Web Games Free HTML5 Games Swordbattle.io Pacman from Google 2010 micropolisJS: Open source micropolis (SimCity) simulator Puzzles 2048 Regex Crossword Gandalf AI Game by Lakera.: Trick the AI (Gandalf) into revealing the secret password. Wordle Family Wordle (original) Absurdle Semantle Sudoku Family Basic Techniques Sumarai Sudoku Misc Tetris in a PDF </description>
     </item>
-    
     <item>
       <title>Hello World!</title>
       <link>https://toddky.github.io/posts/hello-world/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/posts/hello-world/</guid>
-      <description>echo &amp;#34;Hello World!&amp;#34; Welcome to my blog and first ever blog post!
-Why I&amp;rsquo;m Blogging To share my knowledge, thoughts, and ideas with others. To get better at writing and expressing said thoughts and ideas. As a link hoarder, I want somewhere to dump my links (this will be in my Awesome page). Learn Hugo, HTML/CSS, and maybe some JavaScript. Topics Command Line Tools. Things like vim, tmux, git, etc. Scripting.</description>
+      <description>echo &amp;#34;Hello World!&amp;#34; Welcome to my blog and first ever blog post!&#xA;Why I&amp;rsquo;m Blogging To share my knowledge, thoughts, and ideas with others. To get better at writing and expressing said thoughts and ideas. As a link hoarder, I want somewhere to dump my links (this will be in my Awesome page). Learn Hugo, HTML/CSS, and maybe some JavaScript. Topics Command Line Tools. Things like vim, tmux, git, etc. Scripting.</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>https://toddky.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/about/</guid>
       <description>Send me an email at name@example.com</description>
     </item>
-    
     <item>
       <title>Contact Page</title>
       <link>https://toddky.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://toddky.github.io/contact/</guid>
       <description>Send me an email at name@example.com</description>
     </item>
-    
   </channel>
 </rss>
